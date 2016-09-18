@@ -1,4 +1,4 @@
-package com.laioffer.classone;
+package com.laioffer.lab;
 
 public class MyFirstLaiofferClass {
 
