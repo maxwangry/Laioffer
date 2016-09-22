@@ -1,6 +1,6 @@
 package com.laioffer.lab;
 
-public class FIrstOccurence {
+public class FirstOccurence {
 
 	public static int firstOccur(int[] array, int target) {
 		if (array == null || array.length == 0) return -1;
