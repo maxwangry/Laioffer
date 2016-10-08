@@ -11,40 +11,40 @@ import java.util.Arrays;
  */
 
 public class RainbowSort {
-	
-	public static int[] rainbowSort(int[] array) {
-		
-		// Corner case
-		if (array.length <= 1) return array;
-		
-		int red = 0, green = 0, blue = array.length - 1;
-		while (green <= blue) {
-			if (array[green] == -1) {
-				swap(red, green, array);
-				red++;
-				green++;
-			} else if (array[green] == 1) {
-				swap(blue, green, array);
-				blue--;
-			} else {
-				green++;
-			}
-		}
-		return array;
-	}
-	
-	private static void swap(int i, int j, int[] array) {
-		int temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
-	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] array	= new int[] {1,0,-1,0,0,1};
-		array = rainbowSort(array);
-		System.out.println(Arrays.toString(array));
+    public static int[] rainbowSort(int[] array) {
 
-	}
+        // Corner case
+        if (array.length <= 1) return array;
+
+        int red = 0, green = 0, blue = array.length - 1;
+        while (green <= blue) {
+            if (array[green] == -1) {
+                swap(red, green, array);
+                red++;
+                green++;
+            } else if (array[green] == 1) {
+                swap(blue, green, array);
+                blue--;
+            } else {
+                green++;
+            }
+        }
+        return array;
+    }
+
+    private static void swap(int i, int j, int[] array) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] array = new int[]{1, 0, -1, 0, 0, 1};
+        array = rainbowSort(array);
+        System.out.println(Arrays.toString(array));
+
+    }
 
 }
