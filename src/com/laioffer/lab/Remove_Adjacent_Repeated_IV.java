@@ -31,12 +31,14 @@ public class Remove_Adjacent_Repeated_IV {
 
         StringBuffer result = new StringBuffer(stack.size());
         while (!stack.isEmpty()) {
-            result.insert(0, stack.pollLast());
+//            result.insert(0, stack.pollLast());
+            result.append(stack.pollFirst());
         }
         return result.toString();
     }
 
     public static void main(String[] args) {
-        System.out.print(deDup("abbbbaac"));
+        System.out.println(deDup("abbbbaac"));
+        System.out.println(deDup("aabccdc"));
     }
 }
